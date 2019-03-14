@@ -1,26 +1,24 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import React, { Component } from 'react';
+
+import logo from './logo.svg';
+import { Text, View } from 'react-primitives';
+import Heading from '@trekeast/component-library/components/Heading';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <View className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
+          <Text>
             Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          </Text>
+          <Heading title="Temesxgn"/>
+          
         </header>
-      </div>
+      </View>
     );
   }
 }

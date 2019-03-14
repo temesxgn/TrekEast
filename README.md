@@ -60,7 +60,7 @@ Configuration details for each component
 
 ### Create React App
 * `create-react-app web-app`
-* `npm install --save react-dom react-native-web react-art` - web dependencies
+* `npm install --save react-native-web react-art` - web dependencies
 * `npm run eject` - eject webpack configuration to disable ModuleScopePlugin. **VERY IMPORTANT to reference code outside of src folder
 
 ### Universal Component Library
