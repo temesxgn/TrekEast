@@ -22,7 +22,7 @@ by [Temesxgn Gebrehiwet](https://www.upwork.com/fl/temesxgngebrehiwet)
     | component-library | Universal Component Library  |
 
 ## Single Source of Truth
-    Jon Gold at Airbnb proposed the concept of the Single Source of Truth system where definitions of all the pieces that make up a Design Language System (DLS) live. From there, many different applications can pull from that Single Source of Truth to ensure consistency across the user interfaces. In theory, the system is completely platform agnostic
+Jon Gold at Airbnb proposed the concept of the Single Source of Truth system where definitions of all the pieces that make up a Design Language System (DLS) live. From there, many different applications can pull from that Single Source of Truth to ensure consistency across the user interfaces. In theory, the system is completely platform agnostic
 
 ## Constructing a Design Language System
 Set of rules for building a visual identity  to construct a consistent experience across all product mediums. This set of rules can define things like:
@@ -66,7 +66,7 @@ Configuration details for each component
 ### Universal Component Library
 * `npx lerna create @trekeast/component-library -y` - shared components module to be used with all platforms. Call from the root of the repository
 * `npx lerna add react@^16.8.4` 
-* `npx lerna add react-dom@^16.8.4`- make sure we have the same version of the React and ReactDOM in each package by calling lerna add from the root of the repository
+* `npx lerna add react-dom@^16.8.4`- make sure we have the same version of the React, ReactDOM, and React Primitives in each package by calling lerna add from the root of the repository
 * `npx lerna add react-primitives` 
 * `npx lerna add @trekeast/component-library` - run every time after creating a component in component library
 * `npx lerna clean -y && npx lerna bootstrap --hoist` - Hoisting dependencies to the root of the repository is possible. All packages are installed in the root of the repository, and node_modules local to packages contain only symlinks. We can now import modules from the common library.
