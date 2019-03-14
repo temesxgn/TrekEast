@@ -15,13 +15,13 @@ by [Temesxgn Gebrehiwet](https://www.upwork.com/fl/temesxgngebrehiwet)
     | NPM Package       | Description                  |
     |-------------------|------------------------------|
     | native-apps       | IOS & Android Apps           |
-    | web-app           | React Web App                |
+    | web-app           | Create React Web App         |
     | sketch-app        | DLS Sketch File              |
     | storybooks        | Component Documentation      |
     | requests-library  | GraphQL Requests Library     |
     | component-library | Universal Component Library  |
 
-# Single Source of Truth
+## Single Source of Truth
     Jon Gold at Airbnb proposed the concept of the Single Source of Truth system where definitions of all the pieces that make up a Design Language System (DLS) live. From there, many different applications can pull from that Single Source of Truth to ensure consistency across the user interfaces. In theory, the system is completely platform agnostic
 
 ## Constructing a Design Language System
@@ -54,3 +54,24 @@ Single Source of Truth containing Design Language System and Reusable React comp
 * Business
   * `Do the math. If one engineer can now build for three platforms instead of one you’re going to save a lot of money, and it takes less time to ship for multiple platforms.`
 
+## Configuration
+Configuration details for each component
+* Assuming lerna project already created (npx lerna init)
+
+### Create React App
+* `create-react-app web-app`
+* `npm install --save react-dom react-native-web react-art` - web dependencies
+* `npm run eject` - eject webpack configuration to disable ModuleScopePlugin. **VERY IMPORTANT to reference code outside of src folder
+
+### Universal Component Library
+* `npx lerna create @trekeast/component-library -y` - shared components module to be used with all platforms. Call from the root of the repository
+* `npx lerna add react@^16.8.4` 
+* `npx lerna add react-dom@^16.8.4`- make sure we have the same version of the React and ReactDOM in each package by calling lerna add from the root of the repository
+* `npx lerna add react-primitives` 
+* `npx lerna add @trekeast/component-library` - run every time after creating a component in component library
+* `npx lerna clean -y && npx lerna bootstrap --hoist` - Hoisting dependencies to the root of the repository is possible. All packages are installed in the root of the repository, and node_modules local to packages contain only symlinks. We can now import modules from the common library.
+* `npx lerna run start --scope=web-app` - to run web app
+
+-- TODO:
+* `npm install --save react-native` - Native IOS & Android
+* `npm install --save react-sketchapp react-test-renderer` - Sketch
