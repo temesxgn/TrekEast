@@ -21,18 +21,18 @@ by [Temesxgn Gebrehiwet](https://www.upwork.com/fl/temesxgngebrehiwet)
 | component-library | Universal Component Library  |
 
 # Single Source of Truth
-### Jon Gold at Airbnb proposed the concept of the Single Source of Truth system where definitions of all the pieces that make up a Design Language System (DLS) live. From there, many different applications can pull from that Single Source of Truth to ensure consistency across the user interfaces. In theory, the system is completely platform agnostic
+#### Jon Gold at Airbnb proposed the concept of the Single Source of Truth system where definitions of all the pieces that make up a Design Language System (DLS) live. From there, many different applications can pull from that Single Source of Truth to ensure consistency across the user interfaces. In theory, the system is completely platform agnostic
 
 ## Constructing a Design Language System
-### Set of rules for building a visual identity  to construct a consistent experience across all product mediums. This set of rules can define things like:
+#### Set of rules for building a visual identity  to construct a consistent experience across all product mediums. This set of rules can define things like:
 
 * Typography
 * Colors
 * Layouts
 * User Interface components
 
-# Universal Component Library
-## Single Source of Truth containing Design Language System and Reusable React components
+## Universal Component Library
+#### Single Source of Truth containing Design Language System and Reusable React components
 
 ### Benefits
 * Designer
