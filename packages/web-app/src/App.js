@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <View className="App">
-      <Helmet title="You Are Doing Great" />
+      <Helmet title="TrekEast" />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Text>
